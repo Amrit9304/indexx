@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "name": "Cards Api",
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node@1.11.0"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/courses",
+        "dest": "index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "index.js"
+      }
+    ]
+  }

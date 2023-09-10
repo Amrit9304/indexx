@@ -1,9 +1,10 @@
+require('dotenv').config()
 const puppeteer = require('puppeteer');
 const express = require('express');
 const fetch = require('node-fetch');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.get('/', async (_req, res) => {
   try {

@@ -18,7 +18,11 @@ app.get('/', async (_req, res) => {
     
     const shoobUrl = `https://shoob.gg/cards/info/${i}`;
 
-    const browser = await puppeteer.launch({ headless: "new" });
+    const browser = await puppeteer.launch({
+                headless: true,
+                args: ['--no-sandbox', '--incognito', '--single-process', '--no-zygote'],
+                defaultViewport: null
+            })
     const page = await browser.newPage();
     await page.goto(shoobUrl);
 

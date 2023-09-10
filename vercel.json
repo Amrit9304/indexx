@@ -3,18 +3,18 @@
     "name": "Cards Api",
     "builds": [
       {
-        "src": "index.js",
+        "src": "api.js",
         "use": "@vercel/node@1.11.0"
       }
     ],
     "routes": [
       {
         "src": "/api/courses",
-        "dest": "index.js"
+        "dest": "api.js"
       },
       {
         "src": "/(.*)",
-        "dest": "index.js"
+        "dest": "api.js"
       }
     ]
   }

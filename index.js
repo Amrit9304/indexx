@@ -20,7 +20,7 @@ app.get('/', async (_req, res) => {
 
     const browser = await puppeteer.launch({
                 headless: true,
-                args: ['--no-sandbox', '--incognito', '--single-process', '--no-zygote'],
+                args: ['--no-sandbox', '--incognito', '--single-process', '--no-zygote', '--disable-setuid-sandbox'],
                 defaultViewport: null
             })
     const page = await browser.newPage();
